@@ -8,5 +8,10 @@ jobs:
     steps:
       - name: Publish
         uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
       - name: Install deps
         run: npm ci
+      - name: Run dev
+        run: npm run dev
