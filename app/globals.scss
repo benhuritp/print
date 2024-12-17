@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: var(--font-geist-sans);
+}
+
+@media print {
+    @page {
+        size: 10cm 10cm;
+        margin: 0;
+        /* Поля */
+    }
+    .form {
+        display: none !important;
+    }
+
+    .label {
+        display: block !important;
+        page-break-after: always;
+        margin-bottom: 10px;
+    }
+}
+
+
+.label {
+    // display: none;
+}

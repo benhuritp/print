@@ -1,0 +1,14 @@
+name: Publish
+
+on: push
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish
+        uses: actions/checkout@v3
+      - name: Install deps
+        run: npm ci
+      - name: Lint
+        run: npm run lint
